@@ -1,42 +1,176 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  background-color: #0f172a;
+  color: white;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+/* Playground */
+.playground {
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.playground-title {
+  color: #111;
+  text-align: center;
+  padding: 8px;
+}
+
+.path-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.origin {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  color: #444;
+  font-size: 12px;
+}
+
+/* Drone */
+.drone {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 1s linear;
+  border: 2px solid white;
+}
+
+/* Controls */
+.control-section,
+.controls {
+  background: white;
+  color: #111;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.controls h2 {
+  margin-top: 0;
+}
+.coord-inputs {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.coord-inputs label {
+  display: block;
+  margin-bottom: 3px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.coord-inputs input {
+  width: 100px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.add-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+.add-btn:hover {
+  background: #15803d;
 }
 
-.read-the-docs {
-  color: #888;
+/* Buttons */
+.action-btns {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.start-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reset-btn {
+  background: #475569;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Waypoints */
+.waypoints {
+  background: white;
+  color: #111;
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.waypoints ul {
+  list-style: none;
+  padding: 0;
+}
+
+.waypoints li {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.waypoints li.active {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.waypoints button {
+  color: #ef4444;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Status */
+.status-box {
+  background: #fde68a;
+  color: #92400e;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
 }
