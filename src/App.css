@@ -1,8 +1,11 @@
 body {
   background-color: #0f172a;
-  color: white;
-  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-family: Inter, sans-serif;
   margin: 0;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -16,7 +19,9 @@ body {
   gap: 40px;
   padding: 30px;
 }
-
+.playground-section {
+  margin-top: -18px;
+}
 /* Playground */
 .playground {
   position: relative;
@@ -173,4 +178,25 @@ body {
 .input-container {
   display: flex;
   gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .coord-inputs input {
+    width: 80%;
+  }
+  .coord-inputs {
+    text-align: left;
+  }
+  .input-container {
+    display: block;
+  }
+  .add-btn {
+    margin-top: 30px;
+  }
+  body {
+    width: fit-content;
+  }
 }

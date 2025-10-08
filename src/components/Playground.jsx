@@ -4,8 +4,7 @@ import Drone from "./Drone";
 const Playground = ({ dronePosition, waypoints, currentIndex }) => {
   return (
     <div className='playground'>
-      <h3 className='playground-title'>Playground (1000x1000)</h3>
-
+      <h3 className='playground-title'>Playground</h3>
       <svg width='1000' height='1000' className='path-lines'>
         {Array.from({ length: 11 }).map((_, i) => (
           <line
