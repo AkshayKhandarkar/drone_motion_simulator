@@ -2,9 +2,9 @@ import React from "react";
 
 const WaypointList = ({ waypoints, removeWaypoint, currentIndex }) => {
   return (
-    <div className='waypoints'>
+    <div className='waypoint-container'>
       <h3>Coordinates</h3>
-      <ul>
+      <ul className='waypoints'>
         {waypoints.map((wp, i) => (
           <li key={i} className={currentIndex === i ? "active" : ""}>
             {wp.x}, {wp.y}
