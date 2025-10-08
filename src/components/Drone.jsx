@@ -9,7 +9,9 @@ const Drone = ({ position }) => {
         top: `${position.y - 15}px`,
         background: position.stateColor,
       }}
-    ></div>
+    >
+      🚁
+    </div>
   );
 };
 

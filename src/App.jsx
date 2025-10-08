@@ -8,7 +8,7 @@ export default function App() {
   const [dronePosition, setDronePosition] = useState({
     x: 0,
     y: 0,
-    stateColor: "green",
+    stateColor: "#22c55e",
   });
   const [waypoints, setWaypoints] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(-1);
@@ -41,7 +41,7 @@ export default function App() {
       await moveDrone(waypoints[i], i);
     }
 
-    setDronePosition((prev) => ({ ...prev, stateColor: "green" }));
+    setDronePosition((prev) => ({ ...prev, stateColor: "#22c55e" }));
     setCurrentIndex(-1);
     setIsSimulating(false);
     setStatus("🟢 Simulation complete");
@@ -49,7 +49,7 @@ export default function App() {
 
   const reset = () => {
     setWaypoints([]);
-    setDronePosition({ x: 0, y: 0, stateColor: "green" });
+    setDronePosition({ x: 0, y: 0, stateColor: "#22c55e" });
     setCurrentIndex(-1);
     setIsSimulating(false);
     setStatus("🟢 Idle");
